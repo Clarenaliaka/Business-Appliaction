@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/pink"
+    android:orientation="vertical" >
+
+    <ImageButton
+        android:id="@+id/ibstroller"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@null"
+        android:src="@drawable/co" />
+
+    <ImageButton
+        android:id="@+id/ibbaby"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="@null"
+        android:src="@drawable/baby" />
+     
+     
+      <TextView
+         android:id="@+id/textView1"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentTop="true"
+         android:layout_alignRight="@+id/ibnipo"
+         android:layout_marginRight="24dp"
+         android:layout_marginTop="26dp"
+         android:text="@string/stroller" 
+          android:textColor="@color/black"/>
+
+     <ImageButton
+         android:id="@+id/ibsa"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentBottom="true"
+         android:layout_alignParentLeft="true"
+         android:background="@null"
+         android:src="@drawable/sa" />
+
+     <TextView
+         android:id="@+id/textView2"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentBottom="true"
+         android:layout_marginBottom="17dp"
+         android:layout_marginRight="32dp"
+         android:layout_toLeftOf="@+id/ibbaby"
+         android:text="@string/diaper"
+         android:textColor="@color/black" />
+
+     <ImageButton
+         android:id="@+id/ibnipo"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentBottom="true"
+         android:layout_alignParentRight="true"
+         android:background="@null"
+         android:src="@drawable/clo" />
+
+     <ImageButton
+         android:id="@+id/ibcloth"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_above="@+id/ibsa"
+         android:layout_alignParentLeft="true"
+         android:background="@null"
+         android:src="@drawable/cloth" />
+
+     <TextView
+         android:id="@+id/textView3"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignBaseline="@+id/textView2"
+         android:layout_alignBottom="@+id/textView2"
+         android:layout_alignRight="@+id/textView1"
+         android:text="@string/nipo"
+         android:textColor="@color/black" />
+
+     <ImageButton
+         android:id="@+id/ibca"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentRight="true"
+         android:layout_below="@+id/ibbaby"
+         android:background="@null"
+         android:src="@drawable/ca" />
+
+</RelativeLayout>
