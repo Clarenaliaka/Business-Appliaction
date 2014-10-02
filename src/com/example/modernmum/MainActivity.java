@@ -21,7 +21,7 @@ public class MainActivity extends Activity implements OnClickListener {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
+		setContentView(R.layout.main);
 		tvdes = (TextView) findViewById(R.id.tvdes);
 		
 		btnlogin = (Button) findViewById(R.id.btnlogin);
