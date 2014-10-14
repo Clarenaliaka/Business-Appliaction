@@ -257,12 +257,12 @@ int id action_bar_title 0x7f05001c
 int id action_menu_divider 0x7f050016
 int id action_menu_presenter 0x7f050017
 int id action_mode_close_button 0x7f05001e
-int id action_settings 0x7f05005e
+int id action_settings 0x7f05005f
 int id activity_chooser_view_content 0x7f05001f
 int id always 0x7f05000b
 int id beginning 0x7f050011
 int id btnadvert 0x7f050048
-int id btnback 0x7f05005d
+int id btnback 0x7f05005e
 int id btnbuy 0x7f050049
 int id btnchat 0x7f05004a
 int id btncoback 0x7f050046
@@ -271,7 +271,7 @@ int id btnlogback 0x7f05004e
 int id btnlogin 0x7f050051
 int id btnlogsubmit 0x7f05004d
 int id btnregister 0x7f050052
-int id btnsubmit 0x7f05005c
+int id btnsubmit 0x7f05005d
 int id buttonSend 0x7f050044
 int id checkbox 0x7f050027
 int id chkpassword 0x7f05004f
@@ -288,7 +288,7 @@ int id etemail 0x7f05004b
 int id etfirst 0x7f050054
 int id etlast 0x7f050055
 int id etpassword 0x7f05004c
-int id etphone 0x7f05005a
+int id etphone 0x7f05005b
 int id etregemail 0x7f050057
 int id etregpassword 0x7f050059
 int id expand_activities_button 0x7f050020
@@ -310,7 +310,7 @@ int id listMode 0x7f050001
 int id listView1 0x7f050041
 int id list_item 0x7f050023
 int id middle 0x7f050012
-int id modern 0x7f05005b
+int id modern 0x7f05005c
 int id never 0x7f050009
 int id none 0x7f050010
 int id normal 0x7f050000
@@ -340,6 +340,7 @@ int id textView2 0x7f05003b
 int id textView3 0x7f05003d
 int id textView4 0x7f050056
 int id textView5 0x7f050058
+int id textView6 0x7f05005a
 int id title 0x7f050025
 int id tvdes 0x7f050050
 int id up 0x7f05001b
