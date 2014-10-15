@@ -26,6 +26,7 @@ public void sessionmanager(Context context){
 	;
 	sharedpreferences = _context.getSharedPreferences(constants.KEY_PREFS_NAME, 0);
 	
+	SqliteOpenHelper dbOpenHelper = new SqliteOpenHelper(context);
 }
 //creating a Register session
 	public void CreateRegisteruser(String email, String password,String username,
