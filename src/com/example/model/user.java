@@ -50,5 +50,9 @@ public class user {
 	String Password;
 	String confirm;
 	String Location;
+	public int getId() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 
 }
