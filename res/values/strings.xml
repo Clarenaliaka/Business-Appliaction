@@ -21,26 +21,7 @@
     <string name="nipo">Baby Towels</string>
     <string name="diaper">Sandals</string>
     <string name="send">Send</string>
-     <string name="lets">Lets Chat</string>
-    
-
-    <string-array name="modern">
-        <item>location</item>
-        <item>Westlands</item>
-        <item>Ngong road</item>
-        <item>Loresho</item>
-        <item>Kasarani</item>
-        <item>Karen</item>
-        <item>langata</item>
-        <item>Mt.View</item>
-        <item>Uthiru</item>
-        <item>Parklands</item>
-        <item>Upper Hill</item>
-        <item>Nairobi West</item>
-        <item>South B</item>
-        <item>South C</item>
-    </string-array>
-
+    <string name="lets">Lets Chat</string>
     <string name="title_activity_advert_screen">AdvertScreenActivity</string>
     <string name="baby">Baby Products</string>
     <string name="title_activity_home_screen">HomeScreenActivity</string>
@@ -48,6 +29,7 @@
     <string name="btnchat">Chat</string>
     <string name="btntips">Tips</string>
     <string name="btnbuy">Buy</string>
+    <string name="location">Location</string>
     <string name="title_activity_chat">ChatActivity</string>
     <string name="title_activity_contact_screen">ContactScreenActivity</string>
 

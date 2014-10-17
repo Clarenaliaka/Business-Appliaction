@@ -10,16 +10,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/first" 
-        android:textSize="15sp"
-        android:textColor="@color/black"/>
+        android:textSize="13sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="5dp"/>
 
     <EditText
         android:id="@+id/etfirst"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10" >
+        android:ems="5"
+        android:layout_marginTop="5dp" 
+         android:background="@color/white">
 
-        <requestFocus />
+     
     </EditText>
 
     <TextView
@@ -27,75 +30,97 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/last"
-        android:textSize="15sp"
+        android:textSize="13sp"
         android:textColor="@color/black" />
 
     <EditText
         android:id="@+id/etlast"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10" />
+        android:ems="5"
+        android:background="@color/white" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/email"
-        android:textSize="15sp"
+        android:textSize="13sp"
         android:textColor="@color/black" />
 
     <EditText
         android:id="@+id/etregemail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textEmailAddress" />
+        android:ems="5"
+        android:inputType="textEmailAddress"
+         android:background="@color/white" />
 
     <TextView
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/Password"
-        android:textSize="15sp"
+        android:textSize="13sp"
         android:textColor="@color/black" />
 
     <EditText
         android:id="@+id/etregpassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPassword" />
+        android:ems="5"
+        android:inputType="textPassword"
+         android:background="@color/white" />
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Confirm Password" />
+        android:text="Confirm Password" 
+        android:textSize="13sp"
+        android:textColor="@color/black"/>
 
     <EditText
-        android:id="@+id/editText1"
+        android:id="@+id/etconfirm"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10" />
+        android:ems="5" 
+        android:background="@color/white"/>
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/phone" 
-        android:textSize="15sp"
+        android:textSize="13sp"
         android:textColor="@color/black"/>
 
     <EditText
         android:id="@+id/etphone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10" />
+        android:ems="5"
+        android:background="@color/white" />
+    
+     <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="@string/location"
+        android:textSize="13sp"
+        android:textColor="@color/black" />
 
-    <Spinner
-        android:id="@+id/modern"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/etlocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:ems="5" 
+        android:background="@color/white"/>
+    
     
     <RelativeLayout 
     android:layout_width="match_parent"
@@ -104,23 +129,23 @@
     >
 
     <Button
-        android:id="@+id/btnsubmit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="15dp"
-        android:text="@string/btnsubmit" />
-
-    <Button
         android:id="@+id/btnback"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/btnsubmit"
         android:layout_alignBottom="@+id/btnsubmit"
         android:layout_alignParentRight="true"
-        android:layout_marginRight="39dp"
+      
         android:text="@string/btnback" />
+
+   
+    <Button
+        android:id="@+id/btnsubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+       
+        android:text="@string/btnsubmit" />
 
     </RelativeLayout>
 

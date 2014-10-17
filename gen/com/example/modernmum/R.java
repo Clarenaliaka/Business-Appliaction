@@ -16,9 +16,6 @@ public final class R {
         public static final int abc_slide_out_bottom=0x7f040004;
         public static final int abc_slide_out_top=0x7f040005;
     }
-    public static final class array {
-        public static final int modern=0x7f0c0000;
-    }
     public static final class attr {
         /**  Custom divider drawable to use for elements in the action bar. 
          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
@@ -1016,12 +1013,12 @@ containing a value of this type.
         public static final int action_menu_divider=0x7f050016;
         public static final int action_menu_presenter=0x7f050017;
         public static final int action_mode_close_button=0x7f05001e;
-        public static final int action_settings=0x7f05005f;
+        public static final int action_settings=0x7f050061;
         public static final int activity_chooser_view_content=0x7f05001f;
         public static final int always=0x7f05000b;
         public static final int beginning=0x7f050011;
         public static final int btnadvert=0x7f050048;
-        public static final int btnback=0x7f05005e;
+        public static final int btnback=0x7f05005f;
         public static final int btnbuy=0x7f050049;
         public static final int btnchat=0x7f05004a;
         public static final int btncoback=0x7f050046;
@@ -1030,7 +1027,7 @@ containing a value of this type.
         public static final int btnlogin=0x7f050051;
         public static final int btnlogsubmit=0x7f05004d;
         public static final int btnregister=0x7f050052;
-        public static final int btnsubmit=0x7f05005d;
+        public static final int btnsubmit=0x7f050060;
         public static final int buttonSend=0x7f050044;
         public static final int checkbox=0x7f050027;
         public static final int chkpassword=0x7f05004f;
@@ -1043,11 +1040,13 @@ containing a value of this type.
         public static final int edit_query=0x7f05002a;
         public static final int end=0x7f050013;
         public static final int etchatText=0x7f050043;
+        public static final int etconfirm=0x7f05005b;
         public static final int etemail=0x7f05004b;
         public static final int etfirst=0x7f050054;
         public static final int etlast=0x7f050055;
+        public static final int etlocation=0x7f05005e;
         public static final int etpassword=0x7f05004c;
-        public static final int etphone=0x7f05005b;
+        public static final int etphone=0x7f05005c;
         public static final int etregemail=0x7f050057;
         public static final int etregpassword=0x7f050059;
         public static final int expand_activities_button=0x7f050020;
@@ -1069,7 +1068,6 @@ containing a value of this type.
         public static final int listView1=0x7f050041;
         public static final int list_item=0x7f050023;
         public static final int middle=0x7f050012;
-        public static final int modern=0x7f05005c;
         public static final int never=0x7f050009;
         public static final int none=0x7f050010;
         public static final int normal=0x7f050000;
@@ -1100,6 +1098,7 @@ containing a value of this type.
         public static final int textView4=0x7f050056;
         public static final int textView5=0x7f050058;
         public static final int textView6=0x7f05005a;
+        public static final int textView7=0x7f05005d;
         public static final int title=0x7f050025;
         public static final int tvdes=0x7f050050;
         public static final int up=0x7f05001b;
@@ -1171,13 +1170,13 @@ containing a value of this type.
         public static final int support_simple_spinner_dropdown_item=0x7f030024;
     }
     public static final class menu {
-        public static final int advert_screen=0x7f0d0000;
-        public static final int chat=0x7f0d0001;
-        public static final int contact_screen=0x7f0d0002;
-        public static final int home_screen=0x7f0d0003;
-        public static final int login_screen=0x7f0d0004;
-        public static final int main=0x7f0d0005;
-        public static final int register_screen=0x7f0d0006;
+        public static final int advert_screen=0x7f0c0000;
+        public static final int chat=0x7f0c0001;
+        public static final int contact_screen=0x7f0c0002;
+        public static final int home_screen=0x7f0c0003;
+        public static final int login_screen=0x7f0c0004;
+        public static final int main=0x7f0c0005;
+        public static final int register_screen=0x7f0c0006;
     }
     public static final class string {
         public static final int Password=0x7f0a0014;
@@ -1239,14 +1238,15 @@ containing a value of this type.
         public static final int hello_world=0x7f0a0018;
         public static final int last=0x7f0a0012;
         public static final int lets=0x7f0a0021;
+        public static final int location=0x7f0a0029;
         public static final int loce=0x7f0a0016;
         public static final int nipo=0x7f0a001e;
         public static final int phone=0x7f0a0015;
         public static final int send=0x7f0a0020;
         public static final int stroller=0x7f0a001d;
         public static final int title_activity_advert_screen=0x7f0a0022;
-        public static final int title_activity_chat=0x7f0a0029;
-        public static final int title_activity_contact_screen=0x7f0a002a;
+        public static final int title_activity_chat=0x7f0a002a;
+        public static final int title_activity_contact_screen=0x7f0a002b;
         public static final int title_activity_home_screen=0x7f0a0024;
         public static final int title_activity_login_screen=0x7f0a0019;
         public static final int title_activity_register_screen=0x7f0a0017;

@@ -2,6 +2,7 @@ package com.utility.modernmum;
 
 import java.util.HashMap;
 
+import com.example.model.user;
 import com.example.modernmum.LoginScreenActivity;
 
 import android.R.string;
@@ -18,6 +19,7 @@ public class SessionManager {
 	Editor editor;
 	SharedPreferences pref;
 	Context _context;	
+	user UserModel;
 	
 public void sessionmanager(Context context){
 	//initialization
@@ -32,6 +34,15 @@ public void sessionmanager(Context context){
 	public void CreateRegisteruser(String email, String password,String username,
 			String firstname,String lastname,String phonenumber)
 	{
+		
+		UserModel.getFirst();
+		UserModel.getLast();
+		UserModel.getEmail();
+		UserModel.getPassword();
+		UserModel.getConfirm();
+		UserModel.getPhoneNumber();
+		UserModel.getPhoneNumber();
+		
 	editor.putString("constants.KEY_EMAIL",email);
 	editor.putString("constants.KEY_PASSWORD",password);
 	editor.putString("constants.KEY_FIRST",firstname);
@@ -39,6 +50,18 @@ public void sessionmanager(Context context){
 	editor.putString("constants.KEY_PHONE",phonenumber);
 	editor.commit();
 	}	
+	
+	public user getUser(user UserModel ){
+		UserModel.getFirst();
+		UserModel.getFirst();
+		UserModel.getEmail();
+		UserModel.getPassword();
+		UserModel.getConfirm();
+		UserModel.getPhoneNumber();
+		UserModel.getPhoneNumber();
+		return UserModel;
+	}
+	
 	//creating a login session
 	public void CreateLoginSession(String email, String password){
 		sharedpreferences.getString(constants.KEY_EMAIL,email);
