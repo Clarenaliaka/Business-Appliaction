@@ -1,5 +1,6 @@
 package com.utility.modernmum;
 
+import com.example.model.user;
 import com.example.modernmum.LoginScreenActivity;
 
 import android.R.string;
@@ -39,6 +40,7 @@ public class SqliteOpenHelper extends SQLiteOpenHelper{
 		     + COLUMN_CONFIRM +" text,"
 		     
 		     + COLUMN_PHONE +" text );";
+	private static final SQLiteDatabase database = null;
 	
 	public SqliteOpenHelper(Context context){
 		super(context,DATABASE_NAME,null,DATABASE_VERSION);
@@ -52,7 +54,17 @@ public class SqliteOpenHelper extends SQLiteOpenHelper{
 		
 		
 	}
- 
+  public void deleteRegister(user User) {
+	    int id = User.getId();
+	    System.out.println("Comment deleted with id: " + id);
+	    database.delete(SqliteOpenHelper.TABLE_NAME,
+	    SqliteOpenHelper.COLUMN_ID
+	        + " = " + id, null);
+	     String first = User.getFirst();
+	     System.out.println("row deleted " + first);
+	     
+	  }
+  
 	
    
 	@Override
