@@ -23,7 +23,7 @@
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
         android:layout_margin="30dp"
-        android:background="@color/pink"
+        android:background="@color/lightblue"
         android:text="@string/btnlogin"
         android:textColor="#FFFFFF"
         android:textSize="25sp" />
@@ -35,7 +35,7 @@
         android:layout_alignParentLeft="true"
         android:layout_centerVertical="true"
         android:layout_margin="30dp"
-        android:background="@color/pink"
+        android:background="@color/lightblue"
         android:text="@string/btnregister"
         android:textColor="#FFFFFF"
         android:textSize="25sp" />

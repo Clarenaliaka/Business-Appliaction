@@ -20,6 +20,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class RegisterScreenActivity extends Activity implements  OnClickListener {
@@ -27,6 +28,10 @@ EditText etfirst,etlast,etregemail,etregpassword,etphone,etlocation,etconfirm;
 Button btnback,btnsubmit;
 constants myconstants;
 user UserModel;
+TextView tvemail;
+String strfirstname,strlastname,strregister,strphone,strlocation ,strpassword,strconfirm;
+
+
 
 
 	@Override
@@ -34,6 +39,24 @@ user UserModel;
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.register);
 		//instantiation
+		
+		etfirst = (EditText) findViewById(R.id.etfirst);
+		etlast = (EditText) findViewById(R.id.etlast);
+		etregemail= (EditText) findViewById(R.id.etregemail);
+		etregpassword = (EditText) findViewById(R.id.etregpassword);
+		etphone = (EditText) findViewById(R.id.etphone);
+		etlocation= (EditText) findViewById(R.id.etlocation);
+		etconfirm= (EditText) findViewById(R.id.etconfirm);
+		tvemail = (TextView) findViewById(R.id.textView4);
+		
+		btnback = (Button) findViewById(R.id.btnback);
+		btnback.setOnClickListener(this);
+		
+		btnsubmit= (Button) findViewById(R.id.btnsubmit);
+		btnsubmit.setOnClickListener(this);
+		
+		/*myconstants = new constants(getApplicationContext());*/
+		
 		UserModel = new user ();
 		UserModel.setFirst(etfirst.getText().toString());
 		UserModel.setLast(etlast.getText().toString());
@@ -43,77 +66,55 @@ user UserModel;
 		UserModel.setPhoneNumber(etphone.getText().toString());
 		UserModel.setLocation(etlocation.getText().toString());
 		
-		etfirst = (EditText) findViewById(R.id.etfirst);
-		etlast = (EditText) findViewById(R.id.etlast);
-		etregemail= (EditText) findViewById(R.id.etregemail);
-		etregpassword = (EditText) findViewById(R.id.etregpassword);
-		etphone = (EditText) findViewById(R.id.etphone);
-		etlocation= (EditText) findViewById(R.id.etlocation);
-		etconfirm= (EditText) findViewById(R.id.etconfirm);
-		
-		btnback = (Button) findViewById(R.id.btnback);
-		btnback.setOnClickListener(this);
-		
-		btnsubmit= (Button) findViewById(R.id.btnsubmit);
-		btnsubmit.setOnClickListener(this);
-		
-		myconstants = new constants(getApplicationContext());
-		
-		
 		        
 			}
+	
 			
 			@Override
 			public void onClick(View v) {
-				/*String first = "";
-				String last = "";
-				String PhoneNumber= "";
-				String Email = "";
-				String Password = "";
-				String confirm= "";
-				String Location = "";*/
-				
 				
 				switch (v.getId()) {
 	               case R.id.btnsubmit:
 				
-				if(etfirst.getText().toString().equals("") &&etlast .getText().toString().equals("") &&etregemail.getText().toString().equals("")
-					&&etregpassword.getText().toString().equals("") &&etphone.getText().toString().equals("") &&etlocation.getText().toString().equals("")
-					&&etconfirm.getText().toString().equals("")){
-					Toast.makeText(getApplicationContext(), "Please fill the fields", Toast.LENGTH_SHORT).show();
+				if(etfirst.getText().toString().equals("") || etlast .getText().toString().equals("") || etregemail.getText().toString().equals("")
+					|| etregpassword.getText().toString().equals("") || etphone.getText().toString().equals("") || etlocation.getText().toString().equals("")
+					|| etconfirm.getText().toString().equals("")){
+					    if (etfirst.getText().toString().equals("")) {
+							Toast.makeText(getApplicationContext(), "Please enter the firstname", Toast.LENGTH_SHORT).show();
+						}
+						else if (etlast.getText().toString().equals("")) {
+							Toast.makeText(getApplicationContext(), "Please enter the lastname", Toast.LENGTH_SHORT).show();
+						}
+						else if (etregemail.getText().toString().equals("")) {
+							Toast.makeText(getApplicationContext(), "Please enter the email", Toast.LENGTH_SHORT).show();
+						}
+						else if (etregpassword.getText().toString().equals("")) {
+							Toast.makeText(getApplicationContext(), "Please enter the password", Toast.LENGTH_SHORT).show();
+						}
+						else if (etconfirm.getText().toString().equals("")) {
+							Toast.makeText(getApplicationContext(), "Please confirm your password", Toast.LENGTH_SHORT).show();
+						}
+						else if (etphone.getText().toString().equals("")) {
+							Toast.makeText(getApplicationContext(), "Please enter the phonenumber", Toast.LENGTH_SHORT).show();
+						}
+						else if (etlocation.getText().toString().equals("")) {
+							Toast.makeText(getApplicationContext(), "Please enter the location", Toast.LENGTH_SHORT).show();
+						}
+						
+						
+						else if (!etconfirm.getText().toString().equals(etregpassword.getText().toString())) {
+							Toast.makeText(getApplicationContext(), "password does not match", Toast.LENGTH_SHORT).show();
+						}
+						
+						else if(etfirst.getText().toString().equals(etfirst.getText().toString()) && etlast.getText().toString().equals(etlast.getText().toString())&&etregemail.getText().toString().equals(etregemail.getText().toString())
+								&&etregpassword.getText().toString().equals(etregpassword.getText()) &&etphone.getText().toString().equals(etphone.getText())){
+							Toast.makeText(getApplicationContext(), "Login successful", Toast.LENGTH_SHORT).show();
+						}
 				}
-				else if (etfirst.getText().toString().equals("")) {
-					Toast.makeText(getApplicationContext(), "Please enter the firstname", Toast.LENGTH_SHORT).show();
-				}
-				else if (etlast.getText().toString().equals("")) {
-					Toast.makeText(getApplicationContext(), "Please enter the lastname", Toast.LENGTH_SHORT).show();
-				}
-				else if (etregemail.getText().toString().equals("")) {
-					Toast.makeText(getApplicationContext(), "Please enter the email", Toast.LENGTH_SHORT).show();
-				}
-				else if (etregpassword.getText().toString().equals("")) {
-					Toast.makeText(getApplicationContext(), "Please enter the password", Toast.LENGTH_SHORT).show();
-				}
-				else if (etconfirm.getText().toString().equals("")) {
-					Toast.makeText(getApplicationContext(), "Please confirm your password", Toast.LENGTH_SHORT).show();
-				}
-				else if (etphone.getText().toString().equals("")) {
-					Toast.makeText(getApplicationContext(), "Please enter the phonenumber", Toast.LENGTH_SHORT).show();
-				}
-				else if (etlocation.getText().toString().equals("")) {
-					Toast.makeText(getApplicationContext(), "Please enter the location", Toast.LENGTH_SHORT).show();
+				else{
+					startActivity(new Intent(getApplicationContext(),HomeScreenActivity.class));	
 				}
 				
-				
-				else if (!etconfirm.getText().toString().equals(etregpassword)) {
-					Toast.makeText(getApplicationContext(), "password does not match", Toast.LENGTH_SHORT).show();
-				}
-				
-				else if(etfirst.getText().toString().equals(etfirst.getText().toString()) && etlast.getText().toString().equals(etlast.getText().toString())&&etregemail.getText().toString().equals(etregemail.getText().toString())
-						&&etregpassword.getText().toString().equals(etregpassword.getText()) &&etphone.getText().toString().equals(etphone.getText())){
-					Toast.makeText(getApplicationContext(), "Login successful", Toast.LENGTH_SHORT).show();
-				}
-				startActivity(new Intent(getApplicationContext(),HomeScreenActivity.class));
 				break;
 				case R.id.btnback:
 					startActivity(new Intent(getApplicationContext(),MainActivity.class));

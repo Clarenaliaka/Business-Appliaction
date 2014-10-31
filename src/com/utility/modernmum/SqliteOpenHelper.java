@@ -4,10 +4,12 @@ import com.example.modernmum.LoginScreenActivity;
 import com.model.modermum.user;
 
 import android.R.string;
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.DatabaseUtils;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.provider.SyncStateContract.Constants;
 import android.text.GetChars;
 //This class extends sqlite helper
 public class SqliteOpenHelper extends SQLiteOpenHelper{
@@ -24,6 +26,7 @@ public class SqliteOpenHelper extends SQLiteOpenHelper{
 	public static final String COLUMN_CONFIRM = "confirm password";
 	public static final String COLUMN_PHONE = "phone number";
 	
+	ContentValues ContentValue;
 	//creating database
 	public static final String DATABASE_CREATE = "create table"
 			 + TABLE_NAME + "(" + COLUMN_ID
@@ -65,8 +68,36 @@ public class SqliteOpenHelper extends SQLiteOpenHelper{
 	     
 	  }
   
-	
+	public void AddUserDetails(user User){
+		SQLiteDatabase sqliteOpenHelper = this.getWritableDatabase();
+		ContentValue.put(constants.KEY_FIRST,User.getFirst());
+		SqliteOpenHelper.Insert(TABLE_NAME,null,ContentValue);
+		
+	}
    
+
+
+	private static void Insert(String tableName, Object object,
+			ContentValues contentValue2) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+
+	// New value for one column
+	ContentValues values = new ContentValues();
+
+	// Which row to update, based on the ID
+	String selection = SqliteOpenHelper.COLUMN_ID + " LIKE ?";
+	String[] selectionArgs = { String.valueOf(true) };
+
+	int count = database.update(
+	    SqliteOpenHelper.TABLE_NAME,
+	    values,
+	    selection,
+	    selectionArgs);
+
 	@Override
 	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 		db.execSQL("DROP TABLE IF EXISTS" + TABLE_NAME);

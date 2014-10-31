@@ -16,8 +16,13 @@
     <string name="title_activity_login_screen">LoginScreenActivity</string>
     <string name="btnsubmit">Submit</string>
     <string name="btnback">back</string>
+    <string name="btnselect">Select a photo</string>
+    <string name="btnupload">post photo</string>
+    <string name="chose">Select a picture and post</string>
+    <string name="btnup">Upload</string>
     <string name="des">show password</string>
     <string name="stroller">Baby Strollers</string>
+    <string name="event">Events</string>
     <string name="nipo">Baby Towels</string>
     <string name="diaper">Sandals</string>
     <string name="send">Send</string>
@@ -32,5 +37,7 @@
     <string name="location">Location</string>
     <string name="title_activity_chat">ChatActivity</string>
     <string name="title_activity_contact_screen">ContactScreenActivity</string>
+    <string name="title_activity_advtwo_screen">AdvtwoScreenActivity</string>
+    <string name="title_activity_event_screen">EventScreenActivity</string>
 
 </resources>

@@ -3,36 +3,44 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/pink" >
+    android:background="@color/lightblue" >
 
     <Button
         android:id="@+id/btnadvert"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="78dp"
-        android:layout_marginTop="58dp"
+        android:layout_marginTop="31dp"
+        android:layout_toLeftOf="@+id/btnchat"
         android:text="@string/btnadvert" />
+
+    <Button
+        android:id="@+id/btnevent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/btnchat"
+        android:layout_marginLeft="91dp"
+        android:layout_marginTop="85dp"
+        android:text="@string/event" />
 
     <Button
         android:id="@+id/btnbuy"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignTop="@+id/btnchat"
-        android:layout_marginLeft="31dp"
-        android:layout_marginTop="16dp"
+        android:layout_below="@+id/btnadvert"
+        android:layout_marginTop="54dp"
+        android:layout_toLeftOf="@+id/btnadvert"
         android:text="@string/btnbuy" />
 
     <Button
         android:id="@+id/btnchat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_below="@+id/btnadvert"
-        android:layout_marginRight="38dp"
-        android:layout_marginTop="24dp"
+        android:layout_alignBaseline="@+id/btnbuy"
+        android:layout_alignBottom="@+id/btnbuy"
+        android:layout_marginLeft="38dp"
+        android:layout_toRightOf="@+id/btnevent"
         android:text="@string/btnchat" />
 
 </RelativeLayout>

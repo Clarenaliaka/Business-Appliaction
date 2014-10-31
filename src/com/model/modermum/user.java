@@ -54,5 +54,13 @@ public class user {
 		// TODO Auto-generated method stub
 		return 0;
 	}
+	public String getfirst() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	public String getlast() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
 }

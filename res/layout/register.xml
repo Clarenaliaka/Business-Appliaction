@@ -2,15 +2,16 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/lightblue"
     android:orientation="vertical"
-    android:background="@color/pink" >
+    android:padding="@dimen/activity_vertical_margin" >
 
     <TextView
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/first" 
-        android:textSize="13sp"
+        android:textSize="15sp"
         android:textColor="@color/black"
         android:layout_marginTop="5dp"/>
 
@@ -30,7 +31,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/last"
-        android:textSize="13sp"
+        android:textSize="15sp"
         android:textColor="@color/black" />
 
     <EditText
@@ -45,7 +46,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/email"
-        android:textSize="13sp"
+        android:textSize="15sp"
         android:textColor="@color/black" />
 
     <EditText
@@ -61,7 +62,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/Password"
-        android:textSize="13sp"
+        android:textSize="15sp"
         android:textColor="@color/black" />
 
     <EditText
@@ -73,34 +74,39 @@
          android:background="@color/white" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/tvconfirm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Confirm Password" 
-        android:textSize="13sp"
+        android:textSize="15sp"
         android:textColor="@color/black"/>
 
     <EditText
         android:id="@+id/etconfirm"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="5" 
-        android:background="@color/white"/>
+        android:ems="10"
+        android:inputType="textPassword" 
+        android:background="@color/white" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/phone" 
-        android:textSize="13sp"
+        android:textSize="15sp"
         android:textColor="@color/black"/>
 
     <EditText
         android:id="@+id/etphone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="5"
-        android:background="@color/white" />
+        android:ems="10"
+        android:inputType="phone" 
+        android:background="@color/white" >
+
+        <requestFocus />
+    </EditText>
     
      <TextView
         android:id="@+id/textView7"
@@ -109,7 +115,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:text="@string/location"
-        android:textSize="13sp"
+        android:textSize="15sp"
         android:textColor="@color/black" />
 
     <EditText
