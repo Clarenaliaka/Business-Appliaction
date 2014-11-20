@@ -25,7 +25,8 @@ public class ProductScreenActivity extends Activity implements OnItemClickListen
 		private ListView listview;
 		private android.widget.ArrayAdapter<String> stringArrayAdapter;
 		String[] lists ={" Baby Stroller "," Baby's Romper ","Diaper Bag","Diaper","Play Gym",
-				" Plush Duck Toy Baby Blanket "," Baby Rattle ","Baby Bottle Bank ","Baby Cloth Diapers "," Sunscreen Lotion","Pajamas & Leggings for Babies ","Baby Toys Games"};
+				" Plush Duck Toy Baby Blanket "," Baby Rattle ","Baby Bottle Bank ","Baby Cloth Diapers ",
+				" Sunscreen Lotion","Pajamas & Leggings for Babies ","Baby Toys Games"};
 		@Override
 		protected void onCreate(Bundle savedInstanceState) {
 			super.onCreate(savedInstanceState);

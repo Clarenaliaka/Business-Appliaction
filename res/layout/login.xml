@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/lightblue"
+    android:background="@color/darkblue"
     android:orientation="vertical"
     android:paddingBottom="@dimen/loginfields"
      >
@@ -13,24 +13,23 @@
         android:layout_height="wrap_content"
         android:text="@string/email" 
          android:textSize="22sp"
-         android:layout_marginLeft="15dp"
+         android:layout_marginLeft="30dp"
         android:textColor="@color/black"
-        android:layout_marginRight="17dp"/>
+        android:layout_marginRight="20dp"
+         android:layout_marginTop="50dp"/>
 
     <EditText
         android:id="@+id/etemail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/white"
+       android:background="@drawable/edit_style"
         android:ems="10"
-        android:layout_marginLeft="15dp"
+        android:layout_marginLeft="30dp"
         android:inputType="textEmailAddress"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="1dp"
          android:layout_marginRight="17dp"/>
         
         
-
-        <requestFocus />
  
 
     <TextView
@@ -40,8 +39,9 @@
         android:text="@string/Password"
          android:textSize="22sp"
         android:textColor="@color/black" 
-        android:layout_marginLeft="15dp"
-         android:layout_marginRight="20dp"/>
+        android:layout_marginLeft="30dp"
+         android:layout_marginRight="20dp"
+         android:layout_marginTop="50dp"/>
 
     <EditText
         android:id="@+id/etpassword"
@@ -49,15 +49,14 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPassword" 
-        android:background="@color/white" 
-        android:layout_marginTop="5dp" 
-        android:layout_marginLeft="15dp"
+       android:background="@drawable/edit_style"
+        android:layout_marginTop="1dp"
+        android:layout_marginLeft="30dp"
         android:layout_marginRight="20dp"/>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/lightblue"
         android:orientation="vertical" >
 
         <Button
@@ -66,11 +65,12 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_alignParentTop="true"
-           
+            android:textSize="20sp"
             android:layout_marginTop="131dp"
             android:text="@string/btnsubmit"
-            android:layout_marginLeft="15dp" 
-            android:layout_marginRight="20dp"/>
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/button_style"/>
 
         <Button
             android:id="@+id/btnlogback"
@@ -79,10 +79,11 @@
             android:layout_alignBaseline="@+id/btnlogsubmit"
             android:layout_alignBottom="@+id/btnlogsubmit"
             android:layout_alignParentLeft="true"
-           
+           android:textSize="20sp"
             android:text="@string/btnback" 
             android:layout_marginLeft="15dp"
-            android:layout_marginRight="20dp"/>
+            android:background="@drawable/button_style"
+                />
 
         <CheckBox
             android:id="@+id/chkpassword"
@@ -93,7 +94,8 @@
             android:layout_marginTop="15dp"
             android:text="@string/des" 
             android:layout_marginLeft="15dp"
-            android:layout_marginRight="20dp"/>
+            android:layout_marginRight="20dp"
+            android:textSize="20sp"/>
     </RelativeLayout>
 
 </LinearLayout>

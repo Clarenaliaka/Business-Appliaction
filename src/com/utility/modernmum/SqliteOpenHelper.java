@@ -63,14 +63,14 @@ public class SqliteOpenHelper extends SQLiteOpenHelper{
 	    database.delete(SqliteOpenHelper.TABLE_NAME,
 	    SqliteOpenHelper.COLUMN_ID
 	        + " = " + id, null);
-	     String first = User.getFirst();
+	     String first = User.getnames();
 	     System.out.println("row deleted " + first);
 	     
 	  }
   
 	public void AddUserDetails(user User){
 		SQLiteDatabase sqliteOpenHelper = this.getWritableDatabase();
-		ContentValue.put(constants.KEY_FIRST,User.getFirst());
+		ContentValue.put(constants.KEY_NAMES,User.getnames());
 		SqliteOpenHelper.Insert(TABLE_NAME,null,ContentValue);
 		
 	}
@@ -108,6 +108,18 @@ public class SqliteOpenHelper extends SQLiteOpenHelper{
 
 	public void onDowngrade(SQLiteDatabase db, int oldVersion, int newVersion){
 		onDowngrade(db, oldVersion, newVersion);
+	}
+
+
+	public int getRowCount() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+
+	public void resetTables() {
+		// TODO Auto-generated method stub
+		
 	}
 	 
 }

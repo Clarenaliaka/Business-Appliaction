@@ -1,17 +1,12 @@
 package com.model.modermum;
 
 public class user {
-	public String getFirst() {
-		return first;
+	
+	public String getNames() {
+		return names;
 	}
-	public void setFirst(String first) {
-		this.first = first;
-	}
-	public String getLast() {
-		return last;
-	}
-	public void setLast(String last) {
-		this.last = last;
+	public void setNames(String names) {
+		this.names = names;
 	}
 	public String getPhoneNumber() {
 		return PhoneNumber;
@@ -43,8 +38,7 @@ public class user {
 	public void setLocation(String location) {
 		Location = location;
 	}
-	String first;
-	String last;
+	String names;
 	String PhoneNumber;
 	String Email;
 	String Password;
@@ -54,13 +48,11 @@ public class user {
 		// TODO Auto-generated method stub
 		return 0;
 	}
-	public String getfirst() {
+	public String getnames() {
 		// TODO Auto-generated method stub
 		return null;
 	}
-	public String getlast() {
-		// TODO Auto-generated method stub
-		return null;
-	}
+
+	
 
 }

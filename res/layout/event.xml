@@ -3,17 +3,29 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/lightblue" >
+    android:background="@color/darkblue" >
     
  <Button android:text="@string/btnup"
          android:id="@+id/button1"
          android:onClick="pickImage"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"> 
+         android:layout_width="312dp"
+         android:layout_height="wrap_content"
+         android:background="@drawable/button_style"
+         android:layout_marginLeft="20dp"
+         android:textSize="25sp">
  </Button>
  
     <ImageView android:id="@+id/result" 
-        android:src="@drawable/clo"
+        android:src="@drawable/kids"
         android:layout_width="match_parent"
-         android:layout_height="match_parent"></ImageView>
+         android:layout_height="match_parent"
+            >
+
+         </ImageView>
+    <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editText" android:layout_gravity="center_horizontal"/>
+
+
 </LinearLayout>

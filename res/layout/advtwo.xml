@@ -3,7 +3,7 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical"
-    android:background="@color/lightblue">
+    android:background="@color/darkblue">
    
 <TextView  
     android:layout_width="fill_parent" 
@@ -12,18 +12,32 @@
     android:textColor="@color/black"
     android:textSize="17sp"
     />
+
+<EditText
+    android:id="@+id/editText1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:ems="10"
+    android:hint="Describe Your Item"
+    android:inputType="textMultiLine" >
+
+    <requestFocus />
+</EditText>
+
 	<ImageView android:id="@android:id/icon" 
 	android:layout_width="fill_parent"
 	android:layout_height="wrap_content"
 	android:layout_weight="1" />
+
 	<Button android:text="@string/btnselect" 
 	    android:layout_width="fill_parent"
 		android:layout_height="wrap_content" 
 		android:onClick="pickPhoto" />
-	<Button android:text="@string/btnupload" 
-	    android:layout_width="fill_parent"
-		android:layout_height="wrap_content" 
-		android:onClick="uploadPhoto" />
-	
+
+	<Button
+	    android:id="@+id/btnpost"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:text="@string/btnupload" />
 	
 </LinearLayout>

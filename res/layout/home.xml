@@ -3,44 +3,44 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/lightblue" >
+    android:background="@color/darkblue" >
 
     <Button
         android:id="@+id/btnadvert"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="31dp"
-        android:layout_toLeftOf="@+id/btnchat"
-        android:text="@string/btnadvert" />
+        android:layout_marginTop="41dp"
+        android:text="@string/btnadvert"
+        android:background="@drawable/button_style" android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/btnbuy" android:layout_toEndOf="@+id/btnbuy"
+        android:layout_toLeftOf="@+id/btnchat" android:layout_toStartOf="@+id/btnchat"/>
 
     <Button
         android:id="@+id/btnevent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/btnchat"
-        android:layout_marginLeft="91dp"
-        android:layout_marginTop="85dp"
-        android:text="@string/event" />
+        android:layout_marginTop="103dp"
+        android:text="@string/event"
+        android:background="@drawable/button_style" android:layout_below="@+id/btnchat"
+        android:layout_toRightOf="@+id/btnbuy" android:layout_toEndOf="@+id/btnbuy"
+        android:layout_toLeftOf="@+id/btnchat" android:layout_toStartOf="@+id/btnchat"/>
 
     <Button
         android:id="@+id/btnbuy"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/btnadvert"
-        android:layout_marginTop="54dp"
-        android:layout_toLeftOf="@+id/btnadvert"
-        android:text="@string/btnbuy" />
+        android:layout_marginTop="69dp"
+        android:text="@string/btnbuy"
+        android:background="@drawable/button_style"
+        android:layout_below="@+id/btnadvert" android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
 
     <Button
         android:id="@+id/btnchat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/btnbuy"
-        android:layout_alignBottom="@+id/btnbuy"
-        android:layout_marginLeft="38dp"
-        android:layout_toRightOf="@+id/btnevent"
-        android:text="@string/btnchat" />
+        android:text="@string/btnchat"
+        android:background="@drawable/button_style" android:layout_alignTop="@+id/btnbuy"
+        android:layout_alignParentRight="true" android:layout_alignParentEnd="true"/>
 
 </RelativeLayout>

@@ -9,6 +9,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.Date;
 
+import android.widget.Button;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpPost;
@@ -30,18 +31,25 @@ import android.provider.MediaStore;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.ImageView;
 
-public class AdvtwoScreenActivity<ByteArrayBody, MultipartEntity> extends Activity {
+public class AdvtwoScreenActivity<ByteArrayBody, MultipartEntity> extends Activity implements OnClickListener {
 
 	private static final int SELECT_PICTURE = 0;
 	private ImageView imageView;
+	Button btnpost;
+  
 	
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.advtwo);
         imageView = (ImageView) findViewById(android.R.id.icon);
+        btnpost = (Button) findViewById(R.id.btnpost);
+        btnpost.setOnClickListener(this);
+     
+
     }
     
     public void pickPhoto(View view) {
@@ -156,5 +164,19 @@ public class AdvtwoScreenActivity<ByteArrayBody, MultipartEntity> extends Activi
 
 		}
 
+	}
+
+	@Override
+	public void onClick(View v) {
+		switch (v.getId()) {
+		case R.id.btnpost:
+			startActivity(new Intent(getApplicationContext(),AdvertScreenActivity.class));
+			
+			break;
+
+		default:
+			break;
+		}
+		
 	}
 }

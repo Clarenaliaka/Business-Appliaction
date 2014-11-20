@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" 
-    android:background="@color/lightblue">
+    android:background="@color/darkblue">
 
     
    
@@ -26,17 +26,16 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="221dp"
-        android:background="@color/lightblue"
         android:orientation="vertical" >
 
         <Button
             android:id="@+id/btncoback"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
             android:layout_alignParentLeft="true"
             android:layout_marginLeft="22dp"
-            android:text="@string/btnback" />
+            android:textSize="20sp"
+            android:text="@string/btnback" android:layout_alignParentBottom="true"/>
 
         <Button
             android:id="@+id/btncosubmit"
@@ -45,6 +44,7 @@
             android:layout_alignParentBottom="true"
             android:layout_alignParentRight="true"
             android:layout_marginRight="47dp"
+            android:textSize="20sp"
             android:text="@string/btnsubmit" />
 
         

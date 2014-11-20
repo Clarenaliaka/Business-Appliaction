@@ -4,13 +4,24 @@ package com.example.modernmum;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import com.model.modermum.user;
+import com.utility.modernmum.SessionManager;
+import com.utility.modernmum.SqliteOpenHelper;
+import com.utility.modernmum.UserFunctions;
 import com.utility.modernmum.constants;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.UserManager;
 import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -25,6 +36,8 @@ public class LoginScreenActivity extends Activity implements OnClickListener {
 Button btnback,btnsubmit;
 EditText etemail,etpassword,etregemail,etregpassword;
 CheckBox chkpassword;
+user UserModel;
+private static String TAG = LoginScreenActivity.class.getSimpleName();
 constants myconstants;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +52,12 @@ constants myconstants;
 		btnsubmit = (Button) findViewById(R.id.btnlogsubmit);
 		btnsubmit.setOnClickListener(this);
 		//instantiation
-		myconstants = new constants(getApplicationContext());
+		//myconstants = new constants(getApplicationContext());
+        /*UserModel = new user ();
+		
+		
+		UserModel.setEmail(etregemail.getText().toString());
+		UserModel.setPassword(etregpassword.getText().toString());*/
 		
 		chkpassword = (CheckBox) findViewById(R.id.chkpassword);
 		chkpassword.setOnCheckedChangeListener(new OnCheckedChangeListener() {
@@ -85,16 +103,78 @@ constants myconstants;
 			}
 			else{startActivity(new Intent(getApplicationContext(),HomeScreenActivity.class));
 			}
+			
 		    break;
         case R.id.btnlogback:
 			startActivity(new Intent(getApplicationContext(),HomeScreenActivity.class));
 			break;
 			
         default:
+        	Log.e(TAG, "we have a problem.Sermon @code_wizard!!!");
 			break;
 			}
 			}
-	//validating email id
+	 private class LoginAsyncTask extends AsyncTask<String, Void, JSONObject>{
+		 ProgressDialog progressDialog;
+		 @Override
+		 protected void onPreExecute() {
+		 super.onPreExecute();
+		 progressDialog = new ProgressDialog(LoginScreenActivity.this);
+		 progressDialog.setMessage("Logging in ....");
+		 progressDialog.setCancelable(false);
+		 progressDialog.show();
+		 }
+		 @Override
+		 protected JSONObject doInBackground(String... params) {
+		 UserFunctions userFunction = new UserFunctions();
+		 return userFunction.LoginUser(UserModel.getEmail(), UserModel.getPassword());
+		 }
+		 @Override
+		 protected void onPostExecute(JSONObject jsonObject) {
+		 super.onPostExecute(jsonObject);
+		 if(progressDialog.isShowing()){
+		 progressDialog.dismiss();
+		 }
+		 try {
+		 if (jsonObject.getString(constants.kEY_JSON_SUCCESS) != null) {
+		 String res = jsonObject.getString(constants.kEY_JSON_SUCCESS);
+		 if(Integer.parseInt(res) == 1){
+		 // user successfully logged in
+		 // Store user details in SQLite Database
+		SqliteOpenHelper db = new SqliteOpenHelper(getApplicationContext());
+		 JSONObject json_user = jsonObject.getJSONObject("user");
+		 UserModel.setEmail(json_user.getString(constants.kEY_JSON_EMAIL));
+		 UserModel.setPassword(json_user.getString(constants.kEY_JSON_PASSWORD));
+		
+		 // Clear all previous data in database
+		 db.AddUserDetails(UserModel);
+		 // Launch Home Screen
+		 Intent intentHomeScreen = new Intent(getApplicationContext(), HomeScreenActivity.class);
+		 // Close all views before launching Dashboard
+		 intentHomeScreen.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+		 startActivity(intentHomeScreen);
+		 displayToastMessage("Welcome");
+		 // Close Login Screen
+		 finish();
+		 }else{
+		 // Error in login
+		 displayToastMessage("Incorrect username/password");
+		 }
+		 }
+		 } catch (JSONException e) {
+		 e.printStackTrace();
+		 }
+		 }
+		 }
+		 /**
+		 * @param message Message to be displayed
+		 */
+		 public void displayToastMessage(String message) {
+		 Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
+		 }
+		 
+
+	
 			private boolean isValidEmail(String email) {
 				String EMAIL_PATTERN = "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"
 						+ "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
@@ -114,11 +194,4 @@ constants myconstants;
 		}
 
 
-
-
-		
-		
-	
-
-	
 

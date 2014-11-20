@@ -2,27 +2,13 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="fill_parent"
-    android:background="@color/lightblue"
+    android:background="@color/darkblue"
     android:orientation="vertical" >
-    
-    <TextView  
-    android:layout_width="fill_parent" 
-    android:layout_height="wrap_content" 
-    android:text="@string/chose"
-    />
+
 	<ImageView android:id="@android:id/icon" 
 	android:layout_width="fill_parent"
 	android:layout_height="wrap_content"
 	android:layout_weight="1" />
-	<Button android:text="@string/btnselect" 
-	    android:layout_width="fill_parent"
-		android:layout_height="wrap_content" 
-		android:onClick="pickPhoto" />
-	<Button android:text="@string/btnupload" 
-	    android:layout_width="fill_parent"
-		android:layout_height="wrap_content" 
-		android:onClick="uploadPhoto" />
-	
 
     <ImageButton
         android:id="@+id/ibstroller"
@@ -31,7 +17,8 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:background="@null"
-        android:src="@drawable/co" />
+        android:src="@drawable/co"
+        android:layout_marginTop="20dp"/>
 
     <ImageButton
         android:id="@+id/ibbaby"
@@ -100,7 +87,8 @@
          android:layout_above="@+id/ibsa"
          android:layout_alignParentLeft="true"
          android:background="@null"
-         android:src="@drawable/cloth" />
+         android:src="@drawable/cloth"
+         android:layout_marginBottom="30dp"/>
 
      <ImageButton
          android:id="@+id/ibca"

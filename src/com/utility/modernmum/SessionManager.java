@@ -11,6 +11,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.provider.SyncStateContract.Constants;
+import android.widget.CheckBox;
 import android.widget.EditText;
 
 public class SessionManager {
@@ -31,12 +32,12 @@ public void sessionmanager(Context context){
 	SqliteOpenHelper dbOpenHelper = new SqliteOpenHelper(context);
 }
 //creating a Register session
-	public void CreateRegisteruser(String email, String password,String username,
-			String firstname,String lastname,String phonenumber)
+	public void CreateRegisteruser(String email, String password,String username,String confirm,
+			String names,String phonenumber)
 	{
 		
-		UserModel.getFirst();
-		UserModel.getLast();
+		
+		UserModel.getnames();
 		UserModel.getEmail();
 		UserModel.getPassword();
 		UserModel.getConfirm();
@@ -45,15 +46,14 @@ public void sessionmanager(Context context){
 		
 	editor.putString("constants.KEY_EMAIL",email);
 	editor.putString("constants.KEY_PASSWORD",password);
-	editor.putString("constants.KEY_FIRST",firstname);
-	editor.putString("constants.KEY_LAST",lastname);
+	editor.putString("constants.KEY_LAST",names);
 	editor.putString("constants.KEY_PHONE",phonenumber);
 	editor.commit();
 	}	
 	
 	public user getUser(user UserModel ){
-		UserModel.getFirst();
-		UserModel.getFirst();
+		
+		UserModel.getnames();
 		UserModel.getEmail();
 		UserModel.getPassword();
 		UserModel.getConfirm();
@@ -91,9 +91,9 @@ public void sessionmanager(Context context){
 	public HashMap<String, String> getPrompterDetails() {
 		HashMap<String, String> Prompter = new HashMap<String, String>();
 		//user first name
-		Prompter.put(constants.KEY_FIRST, null);
+		
 		//user last name
-		Prompter.put(constants.KEY_LAST, null);
+		Prompter.put(constants.KEY_NAMES, null);
 		//user phone number
 		Prompter.put(constants.KEY_PHONE, null);
 		//user email
@@ -127,6 +127,10 @@ public void logoutPrompter(){
 //check if the prompter is logged in
 public boolean isLoggedIn(){
 	return sharedpreferences.getBoolean(constants.KEY_PREFS_NAME, false);
+}
+public static void setLoginState(CheckBox chkpassword) {
+	// TODO Auto-generated method stub
+	
 }
 }
 

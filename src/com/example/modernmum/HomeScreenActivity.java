@@ -39,7 +39,7 @@ case R.id.btnchat:
 	startActivity(new Intent(getApplicationContext(),ChatScreenActivity.class));
 	break;
 case R.id.btnbuy:
-	startActivity(new Intent(getApplicationContext(),ProductScreenActivity.class));
+	startActivity(new Intent(getApplicationContext(),ProActivity.class));
 	break;
 case R.id.btnevent:
 	startActivity(new Intent(getApplicationContext(),EventScreenActivity.class));

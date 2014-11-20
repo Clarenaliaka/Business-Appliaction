@@ -2,29 +2,9 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/lightblue"
+    android:background="@color/darkblue"
     android:orientation="vertical"
     android:padding="@dimen/activity_vertical_margin" >
-
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/first" 
-        android:textSize="15sp"
-        android:textColor="@color/black"
-        android:layout_marginTop="5dp"/>
-
-    <EditText
-        android:id="@+id/etfirst"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="5"
-        android:layout_marginTop="5dp" 
-         android:background="@color/white">
-
-     
-    </EditText>
 
     <TextView
         android:id="@+id/textView2"
@@ -35,11 +15,12 @@
         android:textColor="@color/black" />
 
     <EditText
-        android:id="@+id/etlast"
+        android:id="@+id/etnames"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="5"
-        android:background="@color/white" />
+        android:background="@drawable/edit_style"
+            />
 
     <TextView
         android:id="@+id/textView4"
@@ -47,7 +28,8 @@
         android:layout_height="wrap_content"
         android:text="@string/email"
         android:textSize="15sp"
-        android:textColor="@color/black" />
+        android:textColor="@color/black"
+        android:layout_marginTop="1dp"/>
 
     <EditText
         android:id="@+id/etregemail"
@@ -55,7 +37,7 @@
         android:layout_height="wrap_content"
         android:ems="5"
         android:inputType="textEmailAddress"
-         android:background="@color/white" />
+        android:background="@drawable/edit_style" />
 
     <TextView
         android:id="@+id/textView5"
@@ -63,7 +45,8 @@
         android:layout_height="wrap_content"
         android:text="@string/Password"
         android:textSize="15sp"
-        android:textColor="@color/black" />
+        android:textColor="@color/black"
+        android:layout_marginTop="1dp"/>
 
     <EditText
         android:id="@+id/etregpassword"
@@ -71,7 +54,7 @@
         android:layout_height="wrap_content"
         android:ems="5"
         android:inputType="textPassword"
-         android:background="@color/white" />
+       android:background="@drawable/edit_style"/>
 
     <TextView
         android:id="@+id/tvconfirm"
@@ -79,15 +62,16 @@
         android:layout_height="wrap_content"
         android:text="Confirm Password" 
         android:textSize="15sp"
-        android:textColor="@color/black"/>
+        android:textColor="@color/black"
+        android:layout_marginTop="1dp"/>
 
     <EditText
         android:id="@+id/etconfirm"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
+        android:ems="5"
         android:inputType="textPassword" 
-        android:background="@color/white" />
+      android:background="@drawable/edit_style"/>
 
     <TextView
         android:id="@+id/textView3"
@@ -95,15 +79,16 @@
         android:layout_height="wrap_content"
         android:text="@string/phone" 
         android:textSize="15sp"
-        android:textColor="@color/black"/>
+        android:textColor="@color/black"
+        android:layout_marginTop="1dp"/>
 
     <EditText
         android:id="@+id/etphone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
+        android:ems="5"
         android:inputType="phone" 
-        android:background="@color/white" >
+        android:background="@drawable/edit_style">
 
         <requestFocus />
     </EditText>
@@ -116,7 +101,8 @@
         android:layout_alignParentTop="true"
         android:text="@string/location"
         android:textSize="15sp"
-        android:textColor="@color/black" />
+        android:textColor="@color/black"
+        android:layout_marginTop="1dp"/>
 
     <EditText
         android:id="@+id/etlocation"
@@ -125,7 +111,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:ems="5" 
-        android:background="@color/white"/>
+        android:background="@drawable/edit_style"/>
     
     
     <RelativeLayout 
@@ -135,23 +121,22 @@
     >
 
     <Button
-        android:id="@+id/btnback"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/btnsubmit"
-        android:layout_alignBottom="@+id/btnsubmit"
-        android:layout_alignParentRight="true"
-      
-        android:text="@string/btnback" />
-
-   
-    <Button
         android:id="@+id/btnsubmit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
        
         android:text="@string/btnsubmit" />
+
+    <Button
+        android:id="@+id/btnback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+       
+        android:text="@string/btnback" />
 
     </RelativeLayout>
 
