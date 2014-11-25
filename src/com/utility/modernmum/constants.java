@@ -17,7 +17,9 @@ public class constants {
 		public static final String KEY_EMAIL="email";
 		public static final String KEY_PASSWORD="password";
 		public static final String KEY_PREFS_NAME="myprefs";
-		public constants(Context context) {
+		
+		public constants() {
+			// TODO Auto-generated constructor stub
 		}
 		//JSON Response node names
 		public static String kEY_JSON_SUCCESS = "success";

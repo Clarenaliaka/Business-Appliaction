@@ -15,6 +15,7 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 
 public class SessionManager {
+	private static final String location = null;
 	//declaration
 	SharedPreferences sharedpreferences;
 	Editor editor;
@@ -42,12 +43,15 @@ public void sessionmanager(Context context){
 		UserModel.getPassword();
 		UserModel.getConfirm();
 		UserModel.getPhoneNumber();
-		UserModel.getPhoneNumber();
+		UserModel.getLocation();
 		
+	editor.putString("constants.KEY_NAMES",names);	
 	editor.putString("constants.KEY_EMAIL",email);
 	editor.putString("constants.KEY_PASSWORD",password);
-	editor.putString("constants.KEY_LAST",names);
+	editor.putString("constants.KEY_LOCATION",confirm);
 	editor.putString("constants.KEY_PHONE",phonenumber);
+	editor.putString("constants.KEY_LOCATION",location);
+
 	editor.commit();
 	}	
 	

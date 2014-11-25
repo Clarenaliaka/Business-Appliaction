@@ -1033,12 +1033,12 @@ containing a value of this type.
         public static final int action_menu_divider=0x7f050016;
         public static final int action_menu_presenter=0x7f050017;
         public static final int action_mode_close_button=0x7f05001e;
-        public static final int action_settings=0x7f050065;
+        public static final int action_settings=0x7f050064;
         public static final int activity_chooser_view_content=0x7f05001f;
         public static final int always=0x7f05000b;
         public static final int beginning=0x7f050011;
         public static final int btnadvert=0x7f05004c;
-        public static final int btnback=0x7f050064;
+        public static final int btnback=0x7f050063;
         public static final int btnbuy=0x7f05004d;
         public static final int btnchat=0x7f05004e;
         public static final int btncoback=0x7f050047;
@@ -1049,7 +1049,7 @@ containing a value of this type.
         public static final int btnlogsubmit=0x7f050052;
         public static final int btnpost=0x7f050040;
         public static final int btnregister=0x7f050056;
-        public static final int btnsubmit=0x7f050063;
+        public static final int btnsubmit=0x7f050062;
         public static final int button1=0x7f050049;
         public static final int buttonSend=0x7f050046;
         public static final int checkbox=0x7f050027;
@@ -1064,14 +1064,14 @@ containing a value of this type.
         public static final int edit_query=0x7f05002a;
         public static final int end=0x7f050013;
         public static final int etchatText=0x7f050045;
-        public static final int etconfirm=0x7f05005f;
+        public static final int etconfirm=0x7f05005e;
         public static final int etemail=0x7f050050;
-        public static final int etlocation=0x7f050062;
-        public static final int etnames=0x7f050059;
+        public static final int etlocation=0x7f050061;
+        public static final int etnames=0x7f050058;
         public static final int etpassword=0x7f050051;
-        public static final int etphone=0x7f050060;
-        public static final int etregemail=0x7f05005b;
-        public static final int etregpassword=0x7f05005d;
+        public static final int etphone=0x7f05005f;
+        public static final int etregemail=0x7f05005a;
+        public static final int etregpassword=0x7f05005c;
         public static final int expand_activities_button=0x7f050020;
         public static final int expanded_menu=0x7f050026;
         public static final int form=0x7f050044;
@@ -1086,7 +1086,6 @@ containing a value of this type.
         public static final int icon=0x7f050024;
         public static final int ifRoom=0x7f05000a;
         public static final int image=0x7f050021;
-        public static final int list=0x7f050058;
         public static final int listMode=0x7f050001;
         public static final int listView1=0x7f050043;
         public static final int list_item=0x7f050023;
@@ -1120,11 +1119,11 @@ containing a value of this type.
         public static final int textView1=0x7f050038;
         public static final int textView2=0x7f05003b;
         public static final int textView3=0x7f05003c;
-        public static final int textView4=0x7f05005a;
-        public static final int textView5=0x7f05005c;
-        public static final int textView7=0x7f050061;
+        public static final int textView4=0x7f050059;
+        public static final int textView5=0x7f05005b;
+        public static final int textView7=0x7f050060;
         public static final int title=0x7f050025;
-        public static final int tvconfirm=0x7f05005e;
+        public static final int tvconfirm=0x7f05005d;
         public static final int up=0x7f05001b;
         public static final int useLogo=0x7f050003;
         public static final int withText=0x7f05000c;
@@ -1195,11 +1194,10 @@ containing a value of this type.
         public static final int login=0x7f030025;
         public static final int main=0x7f030026;
         public static final int pro=0x7f030027;
-        public static final int product=0x7f030028;
-        public static final int register=0x7f030029;
-        public static final int simple_layout=0x7f03002a;
-        public static final int splash=0x7f03002b;
-        public static final int support_simple_spinner_dropdown_item=0x7f03002c;
+        public static final int register=0x7f030028;
+        public static final int simple_layout=0x7f030029;
+        public static final int splash=0x7f03002a;
+        public static final int support_simple_spinner_dropdown_item=0x7f03002b;
     }
     public static final class menu {
         public static final int advert_screen=0x7f0d0000;

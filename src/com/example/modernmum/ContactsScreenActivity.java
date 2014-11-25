@@ -28,7 +28,7 @@ Button btncoback,btncosubmit;
 	public void onClick(View v) {
 		switch (v.getId()) {
 		case R.id.btncoback:
-			startActivity(new Intent(getApplicationContext(),ProductScreenActivity.class));
+			startActivity(new Intent(getApplicationContext(),ProActivity.class));
 			
 			break;
         case R.id.btncosubmit:

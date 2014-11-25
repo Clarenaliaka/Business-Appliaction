@@ -44,13 +44,13 @@ public class MainActivity extends Activity implements OnClickListener {
 	switch (v.getId()) {
 	
     case R.id.btnregister:
-	    Toast.makeText(MainActivity.this, "modernmum" , Toast.LENGTH_SHORT).show();
+	    Toast.makeText(MainActivity.this, "register" , Toast.LENGTH_SHORT).show();
 		
 	   startActivity(new Intent(getApplicationContext(),RegisterScreenActivity.class));
 		
 		break;
     case R.id.btnlogin:
-		Toast.makeText(MainActivity.this, "welcome to the world of application" , Toast.LENGTH_SHORT).show();
+		Toast.makeText(MainActivity.this, "login" , Toast.LENGTH_SHORT).show();
 		
 		startActivity(new Intent(getApplicationContext(),LoginScreenActivity.class));
 		break;

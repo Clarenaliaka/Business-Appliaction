@@ -11,6 +11,8 @@ import com.utility.modernmum.SqliteOpenHelper;
 import com.utility.modernmum.UserFunctions;
 import com.utility.modernmum.constants;
 
+
+
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -33,7 +35,8 @@ public class RegisterScreenActivity extends Activity implements OnClickListener 
 	EditText etnames, etregemail, etregpassword, etphone, etlocation,
 			etconfirm;
 	Button btnback, btnsubmit;
-	constants myconstants;
+	 constants myConstants;
+	
 	user UserModel;
 	TextView tvemail;
 	String strnames, strregister, strphone, strlocation, strpassword,
@@ -46,7 +49,7 @@ public class RegisterScreenActivity extends Activity implements OnClickListener 
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.register);
 		// instantiation
-
+		 myConstants = new constants();
 		etnames = (EditText) findViewById(R.id.etnames);
 		etregemail = (EditText) findViewById(R.id.etregemail);
 		etregpassword = (EditText) findViewById(R.id.etregpassword);
@@ -64,7 +67,8 @@ public class RegisterScreenActivity extends Activity implements OnClickListener 
 		/* myconstants = new constants(getApplicationContext()); */
 
 		UserModel = new user();
-
+		
+		
 	}
 
 	@Override
@@ -219,19 +223,21 @@ public class RegisterScreenActivity extends Activity implements OnClickListener 
 								.getString(constants.kEY_JSON_PHONE));
 						UserModel.setConfirm(jsonObject
 								.getString(constants.kEY_JSON_LOCATION));
+						
 						db.AddUserDetails(UserModel);
 						// Launch LoginScreen
 
-						startActivity(new Intent(getApplicationContext(), LoginScreenActivity.class));
-						displayToastMessage("Registration was Successful");
+						
 						// Close Registration Screen
 						finish();
 					} else {
 						// Error in registration
 						displayToastMessage("Error occurred in registration");
 					}
-				}
-			+6} catch (JSONException e) {
+				};
+				startActivity(new Intent(getApplicationContext(), HomeScreenActivity.class));
+				displayToastMessage("Registration was Successful");	
+			} catch (JSONException e) {
 				e.printStackTrace();
 				Log.e(TAG,
 						"@onPostExecute JSONException Message: "
@@ -249,7 +255,7 @@ public class RegisterScreenActivity extends Activity implements OnClickListener 
 	 *            Message to be displayed
 	 */
 	public void displayToastMessage(String message) {
-		Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT)
+		Toast.makeText(getApplicationContext(), "Successful", Toast.LENGTH_SHORT)
 				.show();
 	}
 

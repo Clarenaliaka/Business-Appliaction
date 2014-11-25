@@ -3,7 +3,7 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical"
-    android:background="@color/darkblue">
+    android:background="@color/black">
    
 <TextView  
     android:layout_width="fill_parent" 
@@ -32,12 +32,17 @@
 	<Button android:text="@string/btnselect" 
 	    android:layout_width="fill_parent"
 		android:layout_height="wrap_content" 
-		android:onClick="pickPhoto" />
+		android:onClick="pickPhoto"
+         android:textColor="@color/white"
+         android:background="@drawable/button_style"/>
 
 	<Button
 	    android:id="@+id/btnpost"
 	    android:layout_width="match_parent"
 	    android:layout_height="wrap_content"
-	    android:text="@string/btnupload" />
+	    android:text="@string/btnupload"
+        android:textColor="@color/white"
+        android:background="@drawable/button_style"
+          />
 	
 </LinearLayout>

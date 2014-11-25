@@ -3,15 +3,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/darkblue" >
+    android:background="@color/black" >
     
  <Button android:text="@string/btnup"
          android:id="@+id/button1"
          android:onClick="pickImage"
-         android:layout_width="312dp"
+         android:layout_width="330dp"
          android:layout_height="wrap_content"
          android:background="@drawable/button_style"
          android:layout_marginLeft="20dp"
+         android:textColor="@color/white"
          android:textSize="25sp">
  </Button>
  

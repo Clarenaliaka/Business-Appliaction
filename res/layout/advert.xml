@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="fill_parent"
-    android:background="@color/darkblue"
+    android:background="@color/black"
     android:orientation="vertical" >
 
 	<ImageView android:id="@android:id/icon" 

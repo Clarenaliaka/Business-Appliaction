@@ -25,9 +25,7 @@ Button btnadvert,btnchat,btnbuy,btnevent;
 		
 		btnevent = (Button) findViewById(R.id.btnevent);
 		btnevent.setOnClickListener(this);
-		
-		
-		
+
 	}
 	@Override
 	public void onClick(View v) {

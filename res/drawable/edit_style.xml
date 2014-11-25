@@ -20,6 +20,6 @@
  
     <item
         android:drawable="@drawable/textfield_disabled" />
- 
+
 
 </selector>

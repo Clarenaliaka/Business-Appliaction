@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/darkblue"
+    android:background="@color/black"
     android:orientation="vertical"
     android:padding="@dimen/activity_vertical_margin" >
 
@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:text="@string/last"
         android:textSize="15sp"
-        android:textColor="@color/black" />
+        android:textColor="@color/white"/>
 
     <EditText
         android:id="@+id/etnames"
@@ -28,7 +28,7 @@
         android:layout_height="wrap_content"
         android:text="@string/email"
         android:textSize="15sp"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:layout_marginTop="1dp"/>
 
     <EditText
@@ -45,7 +45,7 @@
         android:layout_height="wrap_content"
         android:text="@string/Password"
         android:textSize="15sp"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:layout_marginTop="1dp"/>
 
     <EditText
@@ -62,7 +62,7 @@
         android:layout_height="wrap_content"
         android:text="Confirm Password" 
         android:textSize="15sp"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:layout_marginTop="1dp"/>
 
     <EditText
@@ -79,7 +79,7 @@
         android:layout_height="wrap_content"
         android:text="@string/phone" 
         android:textSize="15sp"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:layout_marginTop="1dp"/>
 
     <EditText
@@ -101,7 +101,7 @@
         android:layout_alignParentTop="true"
         android:text="@string/location"
         android:textSize="15sp"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:layout_marginTop="1dp"/>
 
     <EditText
@@ -126,7 +126,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
-       
+        android:background="@drawable/button_style"
+        android:textColor="@color/white"
         android:text="@string/btnsubmit" />
 
     <Button
@@ -135,7 +136,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-       
+        android:textColor="@color/white"
+        android:background="@drawable/button_style"
         android:text="@string/btnback" />
 
     </RelativeLayout>

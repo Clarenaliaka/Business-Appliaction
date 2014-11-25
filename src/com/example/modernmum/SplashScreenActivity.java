@@ -25,6 +25,7 @@ public class SplashScreenActivity extends Activity {
 		                // Start your app main activity
 		                Intent i = new Intent(SplashScreenActivity.this, MainActivity.class);
 		                startActivity(i);
+                        Toast.makeText(SplashScreenActivity.this, "ModernMum" , Toast.LENGTH_SHORT).show();
 		 
 		                // close this activity
 		                finish();
