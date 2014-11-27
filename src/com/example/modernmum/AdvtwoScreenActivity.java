@@ -44,6 +44,7 @@ public class AdvtwoScreenActivity<ByteArrayBody, MultipartEntity> extends Activi
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        
         setContentView(R.layout.advtwo);
         imageView = (ImageView) findViewById(android.R.id.icon);
         btnpost = (Button) findViewById(R.id.btnpost);

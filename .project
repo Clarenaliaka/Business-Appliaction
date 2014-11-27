@@ -3,6 +3,10 @@
 	<name>ModernMum</name>
 	<comment></comment>
 	<projects>
+		<project>appcompat_v7</project>
+		<project>appcompat_v7_2</project>
+		<project>appcompat_v7_3</project>
+		<project>appcompat_v7_4</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

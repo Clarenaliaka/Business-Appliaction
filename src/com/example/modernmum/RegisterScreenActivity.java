@@ -80,9 +80,9 @@ public class RegisterScreenActivity extends Activity implements OnClickListener 
 			if (etnames.getText().toString().equals("")
 					|| etregemail.getText().toString().equals("")
 					|| etregpassword.getText().toString().equals("")
+					|| etconfirm.getText().toString().equals("")
 					|| etphone.getText().toString().equals("")
-					|| etlocation.getText().toString().equals("")
-					|| etconfirm.getText().toString().equals(""))
+					|| etlocation.getText().toString().equals(""))
 				Toast.makeText(getApplicationContext(),
 						"Please fill the fields", Toast.LENGTH_SHORT).show();
 			{
